@@ -1,3 +1,5 @@
+/* Bootstrap icon */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 /* Universal selector */
 *,
 *::after,
@@ -32,8 +34,11 @@ box-shadow: -8px 9px 20px 8px rgba(93,122,120,0.86);
 .d-grid {
     display: grid;
 }
-.gtc-30 {
-    grid-template-columns: repeat(30, 1fr);
+.gtc-19 {
+    grid-template-columns: repeat(19, 1fr);
+}
+.gtr-6 {
+    grid-template-rows: repeat(6, 1fr);
 }
 /* Container */
 .container {
@@ -44,6 +49,7 @@ box-shadow: -8px 9px 20px 8px rgba(93,122,120,0.86);
 .container>*{
     padding-block: .5rem;
     margin-inline: .2rem;
+    width: 100%;
 }
 .row:first-child{
     height: 40vh;
@@ -53,4 +59,44 @@ box-shadow: -8px 9px 20px 8px rgba(93,122,120,0.86);
     background-color: rgba(46, 42, 42, .7);
     padding: .2rem;
     flex-grow: 1;
+}
+/* Keys */
+button {
+    margin: .2rem;
+}
+button[data-title="backspace"],
+button[data-title="enter"] {
+    grid-column: 14/16;
+}
+button[data-title="tab"],
+button[data-title="caps"],
+button[data-title="shift"]{
+    grid-column: 1/3;
+}
+button[data-title="plus"]{
+    grid-column: -2/-1;
+    grid-row: -5/-3;
+}
+button[data-title="enter-right"] {
+    grid-column: -2/-1;
+    grid-row: -3 / -1;
+}
+button[data-title="space"] {
+    background-color: var(--alternative);
+    grid-column: 5/10;
+}
+button[data-title="shift-right"] {
+    grid-column: 13 / 16;
+}
+div[data-title="arrow-wrapper"] {
+    grid-column: 12/16;
+}
+button[data-title="zero-right"] {
+    grid-column: 16 / 18;
+}
+/* media query */
+@media screen and (width < 900px) {
+    .row:last-child{
+        grid-template-columns: repeat(10, 1fr);
+    }
 }
