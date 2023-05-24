@@ -105,8 +105,10 @@ button[data-title="zero-right"] {
     .row:last-child>* {
         padding-inline: .4rem;
     }
-    button[data-title="space"], 
-    button {
+    button[data-title="space"] {
+        flex-grow: 10;
+    }
+    button{
         flex-grow: 1;
     }
 }
